@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <h3>Type a sentence</h3>
+        <form action="/submit" method="post">
+            <input type="text" name="prompt" placeholder="Enter prompt..." required>
+            <button type="submit">submit</button>
+        </form>
+        <% if (locals.sentiment){ %>
+            <p>sentiment <%= sentiment%></p>
+            <p>sentiment <%= score%></p>
+        <% } %>
+    </body>
+</html>
